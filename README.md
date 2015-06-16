@@ -2,7 +2,7 @@
 
  This repo contains some custom error handling middleware attached to
  the loopback framework. The purpose of this is to show a potential bug
- with middleware not being run in staging and development environments.
+ with middleware not being run.
 
  The issue appears when there is a 404 error on an api with the correct
  restApiRoot set.
@@ -15,11 +15,11 @@
     npm install
     npm install -g mocha
 
-## Failing Test
+## Failing Test 1
     export NODE_ENV=staging
     mocha test
 
-## Passing Test
+## Failing Test 2
     export NODE_ENV=production
     mocha test
 
