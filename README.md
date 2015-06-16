@@ -1,4 +1,4 @@
- # Issue with loopback middleware
+# Issue with loopback middleware
 
  This repo contains some custom error handling middleware attached to
  the loopback framework. The purpose of this is to show a potential bug
@@ -6,17 +6,20 @@
 
  The issue appears when there is a 404 error on an api with the correct
  restApiRoot set.
- 	Ex- GET /api/nonexistent - Will not call middleware
-	Ex2 - GET /another/nonexistent - Will call the middleware properly
+ 
+## Examples
+    GET /api/nonexistent - Will not call middleware
+    GET /another/nonexistent - Will call the middleware properly
 
- ## Failing Test
+## Prep
     npm install
-	 npm install -g mocha
+    npm install -g mocha
+
+## Failing Test
+    export NODE_ENV=staging
     mocha test
 
- ## Passing Test
- 	 export NODE_ENV=production
-    npm install
-	 npm install -g mocha
+## Passing Test
+    export NODE_ENV=production
     mocha test
 
